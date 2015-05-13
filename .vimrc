@@ -38,8 +38,6 @@ nnoremap <space><space> :Unite file<cr>
 :nnoremap <space>r <Plug>(unite_restart)
 " Use <leader>l to toggle display of whitespace
 nmap <leader>l :set list!<CR>
-" automatically change window's cwd to file's dir
-set autochdir
 
 " I'm prefer spaces to tabs
 set tabstop=4
