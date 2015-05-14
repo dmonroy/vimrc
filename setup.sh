@@ -9,6 +9,10 @@ ln -sv `pwd`/.vimrc ~/.vimrc
 # Create the new and empty ~/.vim/bundle directory
 mkdir -pv ~/.vim/bundle/
 
+# Create extra config files
+touch ~/.vimrcx
+touch ~/.vimprojects
+
 # Get the vundle plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 

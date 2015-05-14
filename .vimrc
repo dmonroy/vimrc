@@ -11,9 +11,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'amiorin/vim-project'
 Plugin 'fisadev/vim-isort'
+Plugin 'itchyny/lightline.vim'
 Plugin 'klen/python-mode'
-Plugin 'powerline/powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc.vim'
@@ -24,6 +25,26 @@ call vundle#end()
 filetype plugin indent on
 filetype plugin on
 syntax on
+
+set rtp+=~/.vim/bundle/vim-project/
+let project_base="~/"
+
+if !empty(glob("~/.vimrcx"))
+    so ~/.vimrcx
+endif
+
+if !empty(glob('~/.vim/bundle/vim-project/README.md'))
+    call project#rc(project_base)
+
+    if !empty(glob("~/.vimprojects"))
+        so ~/.vimprojects
+    endif
+endif
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
 
 let unite_source_history_yank_enable = 1
 try
